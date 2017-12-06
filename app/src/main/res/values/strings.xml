@@ -7,7 +7,10 @@
     <string name="new_multiplayer_game">Two players mode</string>
     <string name="scores">High scores</string>
     <string name="about_app">About</string>
-    <string name="settings_label">Settings</string>
+    <string name="settings_label">How to Play</string>
+    <string name="settings_description">Press "Single player mode" for playing alone, or "Two player mode" to play in pair. Then fill your name/s and press "Start game" and the game begins. Each player has his two buttons with labels "yes" and "no". Your goal is to earn the most points as you can. You can earn points by correctly answering questions appearing in the middle of the screen. Game ends after 20th question.</string>
+
+
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="player">Player</string>
@@ -26,7 +29,7 @@
 
     <string name="delete_butt">Delete all scores</string>
 
-    <string name="title_activity_solo_game">SoloGame</string>
+    <string name="title_activity_solo_game">THE FASTEST WINS</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 

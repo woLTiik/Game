@@ -7,7 +7,9 @@
     <string name="new_multiplayer_game">Hra pro dva hráče</string>
     <string name="scores">Nejlepší výsledky</string>
     <string name="about_app">O aplikaci</string>
-    <string name="settings_label">Nastavení</string>
+    <string name="settings_label">Jak hrát</string>
+    <string name="settings_description">Pokud si přejete hrát sami stiskněte "Hra pro jednoho hráče", pro hru ve dvou stiskněte "Hra pro dva hráče". Poté se objeví obrazovka, kde zadejte vaše jméno, případně i jméno spoluhráče. Po stisknutí tlačítka "Začít hrát" začne hra. Cílem hry je získat co nejvíce bodů, ty získáte správným zodpovězením otázky, jež se zobrazuje uprostřed. Hra končí po zodpovězení dvacáté otázky.</string>
+
     <string name="yes">ANO</string>
     <string name="no">NE</string>
     <string name="mute_button">Vypnout zvuk</string>
@@ -25,5 +27,6 @@
 
     <string name="delete_butt">Smazat všechny výsledky</string>
 
+    <string name="title_activity_solo_game">NEJRYCHLEJŠÍ VYHRÁVÁ</string>
 
 </resources>

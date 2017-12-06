@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
+        android:background="@drawable/walppr"
         tools:layout_editor_absoluteY="63dp">
 
         <LinearLayout
