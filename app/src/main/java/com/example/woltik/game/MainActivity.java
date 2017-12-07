@@ -1,6 +1,8 @@
 package com.example.woltik.game;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +20,11 @@ public class MainActivity extends AppCompatActivity {
     TextView multiPlayerTextView;
     TextView singlePlayerView;
     MediaPlayer menuMusic;
+    boolean isMuted;
     ToggleButton muteBtn;
+    SharedPreferences mySharedPref;
+    SharedPreferences.Editor mySharedEditor;
+
 
 
     @Override
@@ -26,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mySharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
+        isMuted = mySharedPref.getBoolean("isMuted", true);
 
 
         highScoreTextView = (TextView)findViewById(R.id.highScoreLabel);
@@ -81,16 +89,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
         muteBtn = (ToggleButton) findViewById(R.id.mute_btn);
-        muteBtn.setChecked(true);
+        muteBtn.setChecked(isMuted);
+        if(!isMuted){
+            menuMusic = MediaPlayer.create(MainActivity.this, R.raw.menu_music);
+            menuMusic.start();
+        }
         muteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mySharedEditor = mySharedPref.edit();
+
                 if(muteBtn.isChecked()){
+                    isMuted = true;
+                    mySharedEditor.putBoolean("isMuted",isMuted);
                     menuMusic.stop();
                 }else{
-                   menuMusic = MediaPlayer.create(MainActivity.this, R.raw.menu_music);
+                    isMuted = false;
+                    mySharedEditor.putBoolean("isMuted",isMuted);
+                    menuMusic = MediaPlayer.create(MainActivity.this, R.raw.menu_music);
                     menuMusic.start();
                 }
+                mySharedEditor.apply();
+
             }
         });
     }
